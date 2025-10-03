@@ -1,0 +1,29 @@
+/*
+Author: Maria Halla-aho
+Date: 2025-10-03
+*/
+body
+    {
+        font-family: Arial;
+        text-align: center;
+        margin: 20px;
+    }
+img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+video, 
+audio {
+   display: block;
+    margin: 30px auto;
+}
+
+
+h1,
+img,
+video,
+audio {
+    margin-bottom: 30px;
+}
