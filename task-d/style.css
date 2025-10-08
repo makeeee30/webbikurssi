@@ -1,0 +1,59 @@
+/*
+Author Maria Halla-aho
+DATE: 2025-10-07
+*/
+
+body {
+    color: blueviolet
+}
+
+h1 {
+    color: navy;
+    font-size: x-large;
+    text-align: center;
+}
+
+h3 {
+    color: rgb(67, 67, 159); 
+    text-align: center;
+    
+}
+
+
+.box-blue {
+    background-color: blue;
+    padding: 10px;
+    color: black;
+
+}
+
+.box-pink {
+    background-color: pink;
+    padding: 10px;
+    color: black;
+}
+
+#special-message {
+    color: green;
+    font-weight: bold;
+}
+
+section ul li {
+    list-style-type: square;
+    color: black;
+}
+
+a[target= "_blank"] {
+    text-decoration: underline;
+    color: blue;
+}
+
+img[alt] {
+    border: 2px dashed gray;
+    padding: 10px;
+    
+}
+
+h1, h2 {
+    font-family: Arial, sans-serif;
+}
