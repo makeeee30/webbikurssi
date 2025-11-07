@@ -1,7 +1,6 @@
 <!--
-    Author: Maria Halla-aho
-    Date: 2025-10-31
--->
+Author: Maria Halla-aho
+Date: 2025-11-07-->
 <!DOCTYPE html>
 <html lang="en"><head>
   <meta charset="UTF-8">
@@ -11,10 +10,9 @@
 </head>
 
 <body>
-
-
+ 
   <header class="site-header">
-    <h1>Weekly Timetable</h1>
+    <h1>Registeration page</h1>
   </header>
 
   <main class="content">
@@ -32,7 +30,31 @@
         <h2 class="controls-title">Add Course</h2>
 
         <form id="addCourseForm">
+          <input type="hidden" id="timestamp" name="timestamp">
+          
           <div class="form-row">
+          <label for="fullName">Full Name</label>
+          <input id="fullName" name="fullName" type="text" required>
+          <div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required>
+            </div>
+            <div class="form-row">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" required>
+            </div>
+            <div class="form-row">
+              <label for="BirthDate">Birth Day</label>
+              <input id="BirthDate" name="BirthDate" type="date" required>
+            </div>
+            <div class="form-row">
+              <label>
+                <input type="checkbox" id="terms" name="terms" required>
+                Accept terms and conditions
+              </label>
+            </div>
+          </div>
             <label for="courseName">Course name</label>
             <input id="courseName" name="courseName" type="text" required="" placeholder="e.g., Web Development Basics">
           </div>
@@ -43,8 +65,7 @@
             <label><input type="checkbox" name="day" value="Tue"> Tue</label>
             <label><input type="checkbox" name="day" value="Wed"> Wed</label>
             <label><input type="checkbox" name="day" value="Thu"> Thu</label>
-            <label><input type="checkbox" name="day" value="Fri"> Fri</label>
-            
+            <label><input type="checkbox" name="day" value="Fri"> Fri </label>
           </fieldset>
 
           <div class="form-row">
@@ -60,6 +81,7 @@
       <table class="table" id="timetable">
         <thead>
           <tr>
+            <th>timestamp</th>
             <th>Course</th>
             <th>Mon</th>
             <th>Tue</th>
