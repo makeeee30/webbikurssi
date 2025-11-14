@@ -1,0 +1,141 @@
+<!--
+Author: Maria Halla-aho
+Date: 2025-11-14
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weekly Timetable</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="index.js" defer></script>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+    <header class="bg-blue-600 text-white p-4 text-center">
+        <h1 class="text-2xl font-bold">Registration Page</h1>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4">
+        <!-- Top grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+
+            <!-- Student info -->
+            <section class="md:col-span-1 bg-slate-100 p-4 rounded shadow">
+                <h2 class="text-xl font-bold mb-2">Information</h2>
+                <p class="text-slate-800"><span class="font-semibold">Maria Halla-aho</span></p>
+                <p class="text-slate-800"><span class="font-semibold">NTIS24K</span></p>
+
+            </section>
+
+            <!-- Controls add course + day marks -->
+            <section class="md:col-span-2 bg-white p-4 rounded shadow">
+                <h2 class="text-xl font-bold mb-4">Add Course</h2>
+
+
+                <form id="addCourseForm">
+                    <div id="errorMessages" class="text-red-600 mb-4"></div>
+
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <!-- Name -->
+                    <div class="mb-4">
+                        <label for="fullName" class="block font-medium text-slate-700">Full Name</label>
+                        <input id="fullName" name="fullName" type="text" required
+                            class="w-full border border-slate-300 p-2 rounded">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-4">
+                        <label for="email" class="block font-medium text-slate-700">Email</label>
+                        <input id="email" name="email" type="email" required
+                            class="w-full border border-slate-300 p-2 rounded">
+                    </div>
+
+                    <!-- Number -->
+                    <div class="mb-4">
+                        <label for="phone" class="block font-medium text-slate-700">Phone Number</label>
+                        <input id="phone" name="phone" type="tel" required
+                            class="w-full border border-slate-300 p-2 rounded">
+                    </div>
+
+                    <!-- Birth Date -->
+                    <div class="mb-4">
+                        <label for="BirthDate" class="block font-medium text-slate-700">Birth Date</label>
+                        <input id="BirthDate" name="BirthDate" type="date" required
+                            class="w-full border border-slate-300 p-2 rounded">
+                    </div>
+
+                    <!-- Acceptance -->
+                    <div class="mb-4">
+                        <label class="inline-flex items-center text-slate-700">
+                            <input type="checkbox" id="terms" name="terms" required class="mr-2 accent-blue-600">
+                            Accept terms and conditions
+                        </label>
+                    </div>
+
+                    <!-- Course Name -->
+                    <div class="mb-4">
+                        <label for="courseName" class="block font-medium text-slate-700">Course Name</label>
+                        <input id="courseName" name="courseName" type="text" required
+                            placeholder="e.g., Web Development Basics"
+                            class="w-full border border-slate-300 p-2 rounded">
+                    </div>
+
+
+                    <fieldset class="border border-slate-300 p-4 rounded mb-4">
+                        <legend class="font-medium mb-2">Days (yes = ✅, no = ❌)</legend>
+                        <div class="grid grid-cols-3 gap-2">
+
+                            <label><input type="checkbox" name="day" value="Mon"> Mon</label>
+                            <label><input type="checkbox" name="day" value="Tue"> Tue</label>
+                            <label><input type="checkbox" name="day" value="Wed"> Wed</label>
+                            <label><input type="checkbox" name="day" value="Thu"> Thu</label>
+                            <label><input type="checkbox" name="day" value="Fri"> Fri </label>
+                        </div>
+                        </fieldset>
+
+                    <div class="flex gap-4 mt-4">
+                        <button id="addRowBtn" type="submit"
+                            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                            Add row
+                        </button>
+                        <button id="clearBtn" type="reset"
+                            class="bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-400">
+                            Clear
+                        </button>
+                    </div>
+
+                </form>
+            </section>
+        </div>
+
+        <!-- Table -->
+        <div class="table-wrap">
+            <table id="timetable"
+            class="min-w-full border border-slate-300 text-sm bg-white rounded shadow">
+                <thead class="bg-slate-200">
+                    <tr>
+                        <th class="p-2 border">timestamp</th>
+                        <th class="p-2 border">Course</th>
+                        <th class="p-2 border">Mon</th>
+                        <th class="p-2 border">Tue</th>
+                        <th class="p-2 border">Wed</th>
+                        <th class="p-2 border">Thu</th>
+                        <th class="p-2 border">Fri</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+
+
+</body>
+
+</html>
