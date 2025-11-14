@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const courseName = courseInput.value.trim();
     if (!courseName) return;
 
+
+
     //virheet ja niiden koodit
     const fullName = form.fullName.value.trim();
     const email = form.email.value.trim();
@@ -31,14 +33,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if (fullName.length < 3) errors.push("Enter full name");
     if (!email.includes("@")) errors.push("Enter valid email");
     if (!/^\d{7,15}$/.test(phone)) errors.push("Invalid phone number");
-    if(!BirthDate) errors.push("Birth Date is required");
+    if (!BirthDate) errors.push("Birth Date is required");
     if (!termsAccepted) errors.push("You must accept terms");
 
     if (errors.length > 0) {
       alert("Please fix the following errors: \n\n" + errors.join("\n"));
       return;
-    } 
-    
+    }
+    document.getElementById("studentName").textContent = fullName;
+    document.getElementById("studentGroup").textContent = "Group 1";
+
+
+
 
     // Collect checked days into a Set
     const checkedDays = new Set(
