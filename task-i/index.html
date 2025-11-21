@@ -1,0 +1,253 @@
+<!--
+Author: Maria Halla-aho
+Date: 2025-11-20-->
+
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vuokrattavat Retkeilyvarusteet</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <!-- Navigaatio -->
+    <nav>
+        <a href="#" onclick="showPage('etusivu')">Etusivu</a>
+        <a href="#" onclick="showPage('Teltat')">Teltat</a>
+        <a href="#" onclick="showPage('Varusteet')">Varusteet</a>
+        <a href="#" onclick="showPage('Paketit')">Paketit</a>
+        <a href="#" onclick="showPage('Yhteystiedot')">Yhteystiedot</a>
+    </nav>
+
+
+    <!-- Hero-osio -->
+    <section id="etusivu" class="hero">
+        <div class="hero-content">
+            <h1>Retkelle Oy</h1>
+
+        </div>
+        <img src="taustakuva.png" alt="taustalle kuva" class="hero-image">
+         <small>Kuva on luotu tekoälyllä (ChatGPT)</small>
+
+
+        <!-- About-osio -->
+
+        <h2>Tervetuloa Retkelle Oy:n sivuille!</h2>
+        <p>Haluatko retkelle, mutta varusteet uupuvat? Ei hätää meiltä saat tarvittavan hyvään hintaan.
+            Olemme suomalainen perheyritys, joka haluaa intohimomme innoittamana tehdä kaikille retkeilystä
+            mahdollisimman helppoa ja saavutettavaa.
+            Perheyrityksemme on perustettu vuonna 2020.
+
+        <p>Tarjoamme vuokrattavia retkivarusteita. Teltoista keittimiin ja halpaan hintaan!
+            Oli reissu lyhyt päiväretki tai sitten pitempikin seikkailu meiltä saa kaiken tarvittavan jokaiseen retkeen.
+        </p>
+
+        <p>Arvomme perustuvat kestäään kehitykseen ja luonnon monimuotoisuuden säilyttämiseen.
+            Haluammem myös tällä tuoda jokaiselle mahdollisuuden lähteä seikkailemaan ilman isompaa investointia.
+        </p>
+
+        <p>Tervetuloa tutustumaan valikoimaamme!</p>
+
+        <h2>Miksi valita meidät?</h2>
+        <ul class="features-list">
+            <li>Kotimainen</li>
+            <li>Perheyritys</li>
+            <li>Helppous</li>
+            <li>Kestävä kehitys</li>
+            <li>Laaja valikoima</li>
+        </ul>
+        <div class="cta-buttons">
+            <a href="#" class="cta-button green" onclick="showPage('Varusteet')">Katso varusteet</a>
+            <a href="#" class="cta-button outline" onclick="showPage('Yhteystiedot')">Ota yhteyttä</a>
+        </div>
+
+
+
+
+    </section>
+
+
+
+
+    <!-- Teltat -->
+    <section id="Teltat" class="boksi">
+        <h2>Teltat</h2>
+        <div class="products">
+            <div class="product">
+                <h3>Teltta (2 hlö)</h3>
+                <p>Hinta: 20 €/päivä</p>
+                <img src="teltta_pieni.png" alt="teltta_pieni">
+                <small>Kuva on luotu tekoälyllä (ChatGPT)</small>
+            </div>
+            <div class="product">
+                <h3>Teltta (4 hlö)</h3>
+                <p>Hinta: 35 €/päivä</p>
+                <img src="teltta_iso.png" alt="teltta_iso">
+                <small>Kuva on luotu tekoälyllä (ChatGPT)</small>
+            </div>
+            <div class="product">
+                <h3>Teltta (6 hlö)</h3>
+                <p>Hinta: 60 €/päivä</p>
+                <small>Kuva tulossa</small>
+
+            </div>
+            <div class="product">
+                <h3>Teltta (10 hlö)</h3>
+                <p>Hinta: 80 €/päivä</p>
+                <small>Kuva tulossa</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- Varusteet -->
+    <section id="Varusteet" class="boksi">
+        <h2>Varusteet</h2>
+        <div class="products">
+            <div class="product">
+                <h3>Makuupussi</h3>
+                <p>8 €/päivä</p>
+                <p>(Erilaisia värivaihtoehtoja)</p>
+                <img src="makuualusta.png" alt="Makuupussi">
+                <small>Kuva on luotu tekoälyllä (ChatGPT)</small>
+            </div>
+            <div class="product">
+                <h3>Retkikeitin 1.3L</h3>
+                <p>10 €/päivä</p>
+                <img src="retkikeitin.png" alt="retkikeitin">
+                <small>Kuva on luotu tekoälyllä (ChatGPT)</small>
+            </div>
+            <div class="product">
+                <h3>Retkikeitin 2.5L</h3>
+                <p>12 €/päivä</p>
+                <small>Kuva tulossa</small>
+
+            </div>
+            <div class="product">
+                <h3>Makuualusta</h3>
+                <p>4 €/päivä</p>
+                <img src="alusta_for_real.png" alt="alusta">
+                <small>Kuva on luotu tekoälyllä (ChatGPT)</small>
+            </div>
+            <div class="product">
+                <h3>Reppu (35L)</h3>
+                <p>10 €/päivä</p>
+                <p>(Erilaisia värivaihtoehtoja)</p>
+                <small>Kuva tulossa</small>
+            </div>
+            <div class="product">
+                <h3>Reppu (55L)</h3>
+                <p>15 €/päivä</p>
+                <p>(Erilaisia värivaihtoehtoja)</p>
+                <small>Kuva tulossa</small>
+            </div>
+            <div class="product">
+                <h3>Reppu (25L)</h3>
+                <p>8 €/päivä</p>
+                <img src="reppu_25l.png" alt="reppu">
+                <small>Kuva on luotu tekoälyllä (ChatGPT)</small>
+                <p>(Erilaisia värivaihtoehtoja)</p>
+            </div>
+            <div class="product">
+                <h3>Onki // Virveli </h3>
+                <p>8 €/päivä (sis. syötit) </p>
+                <img src="onkivapa.png" alt="onkivapa">
+                <small>Kuva on luotu tekoälyllä (ChatGPT)</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paketit -->
+    <section id="Paketit" class="boksi">
+        <h2>Paketit</h2>
+        <div class="products">
+            <div class="product">
+                <h3>Paketti 1</h3>
+                <p>50 € / 2 päivää</p>
+                <p>Paketti sisältää tavarat: 2x makuupussit, 2x reppu, 1x retkikeitin, 2 hlö teltta</p>
+                <small>Kuva tulossa</small>
+            </div>
+            <div class="product">
+                <h3>Paketti 2</h3>
+                <p>90 € / 2 päivää</p>
+                <p>Paketti sisältää tavarat: 4x makuupussit, 4x reppu, 2x retkikeitin, 1x onki, 4 hlö teltta</p>
+                <small>Kuva tulossa</small>
+            </div>
+            <div class="product">
+                <h3>Paketti 3</h3>
+                <p>120 € / 2 päivää</p>
+                <p>Paketti sisältää tavarat: 6x makuupussit, 6x reppu, 2x retkikeitin, 6 hlö teltta, 1x Onki</p>
+                <small>Kuva tulossa</small>
+            </div>
+            <div class="product">
+                <h3>Paketti 4</h3>
+                <p>180 € / 2 päivää</p>
+                <p>Paketti sisältää tavarat: 10x makuupussit, 10x reppu, 3x retkikeitin, 2x onki, 10 hlö teltta</p>
+                <small>Kuva tulossa</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- Varaus -->
+    <section id="varaus">
+        <h2>Tee varaus tai kysy lisätietoja</h2>
+        <form>
+            <label>Nimi:</label><br>
+            <input type="text" name="nimi" required><br><br>
+            <label>Sähköposti:</label><br>
+            <input type="email" name="email" required><br><br>
+            <label>Varusteet:</label><br>
+            <textarea name="varusteet" rows="4"></textarea><br><br>
+            <label>Vuokrauspäivät:</label><br>
+            <input type="date" name="alku"> - <input type="date" name="loppu"><br><br>
+            <button type="submit">Lähetä varaus</button>
+        </form>
+    </section>
+
+
+    <!-- Yhteystiedot -->
+
+    <section id="Yhteystiedot">
+        <h2>Yhteystiedot</h2>
+        <p>
+            Retkelle Oy<br>
+            Kokkolankatu 1<br>
+            67200 Kokkola<br>
+            Puh: 001 000 000<br>
+            Email: info@retkelle.fi
+        </p>
+
+        <!-- Lomake -->
+        <form>
+            <label for="nimi">Nimi:</label><br>
+            <input type="text" id="nimi" name="nimi" required><br><br>
+
+            <label for="email">Sähköposti:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="puhelin">Puhelin numero:</label><br>
+            <input type="tel" id="puhelin" name="puhelin" required><br><br>
+
+            <label for="tavarat">Tavarat joita haluat:</label><br>
+            <textarea id="tavarat" name="tavarat" rows="4"
+                placeholder="Kirjoita tähän haluamasi varusteet tai kysy lisätietoja"></textarea><br><br>
+
+            <button type="submit">Lähetä</button>
+        </form>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Retkelle Oy</p>
+
+
+    </footer>
+
+</body>
+
+</html>
