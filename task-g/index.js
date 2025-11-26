@@ -1,4 +1,3 @@
-// index.js
 // Author: Maria Halla-aho
 // Date: 2025-11-07
 // Handles adding new course rows with day marks (✅/❌)
@@ -30,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //virheilmoitukset
     const errors = [];
-    if (fullName.length < 3) errors.push("Enter full name");
+    if (fullName.length <3) errors.push("Enter full name");
     if (!email.includes("@")) errors.push("Enter valid email");
     if (!/^\d{7,15}$/.test(phone)) errors.push("Invalid phone number");
     if (!BirthDate) errors.push("Birth Date is required");
@@ -60,8 +59,19 @@ document.addEventListener("DOMContentLoaded", () => {
     timeCell.textContent = timestamp;
     row.appendChild(timeCell);
 
-    // Course cell
+    //fullname
     const nameCell = document.createElement("td");
+    nameCell.textContent = fullName;
+    row.appendChild(nameCell);
+
+    //phone 
+    const phoneCell = document.createElement("td");
+    phoneCell.textContent = phone;
+    row.appendChild(phoneCell);
+
+
+    // Course cell
+    const coursenameCell = document.createElement("td");
     nameCell.textContent = courseName;
     row.appendChild(nameCell);
 
