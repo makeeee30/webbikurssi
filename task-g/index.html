@@ -1,10 +1,10 @@
 <!--
 Author: Maria Halla-aho
 Date: 2025-11-07-->
+
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
   <meta charset="UTF-8">
   <title>Weekly Timetable</title>
   <link rel="stylesheet" href="style.css">
@@ -18,88 +18,69 @@ Date: 2025-11-07-->
   </header>
 
   <main class="content">
-    <!-- Top row split into two blocks -->
     <div class="top-grid">
-      <!-- Student info  -->
       <section class="student-info" aria-label="Student information">
         <h2 class="student-info-title">Information</h2>
-        <p><span id="studentName" class="student-name">Maria</span></p>
-        <p><span id="studentGroup" class="student-group">NTIS24K</span></p>
+        <p><span class="student-name">Maria Halla-aho</span></p>
+        <p><span class="student-group">NTIS24K</span></p>
       </section>
 
-      <!-- Control add course + day marks -->
-      <section class="controls" aria-label="Add course row">
-        <h2 class="controls-title">Information</h2>
-
-        <form id="addCourseForm" novalidate>
-
-          <input type="hidden" id="timestamp" name="timestamp">
-
-
-            <div class="form-row">
-              <label for="fullName">Full Name</label>
-              <input id="fullName" name="fullName" type="text" required>
-            </div>
-
-            <div class="form-row">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" required>
-            </div>
-
-            <div class="form-row">
-              <label for="phone">Phone Number</label>
-              <input id="phone" name="phone" type="tel" required>
-            </div>
-
-            <div class="form-row">
-              <label for="BirthDate">Birth Day</label>
-              <input id="BirthDate" name="BirthDate" type="date" required>
-            </div>
-
-            <div class="form-row">
-              <label for="courseName">Course name</label>
-              <input id="courseName" name="courseName" type="text" required placeholder="e.g., Web Development Basics">
-            </div>
-
-            <fieldset class="days-group">
-              <legend>Days (yes = ✅, no = ❌)</legend>
-              <label><input type="checkbox" name="day" value="Mon"> Mon</label>
-              <label><input type="checkbox" name="day" value="Tue"> Tue</label>
-              <label><input type="checkbox" name="day" value="Wed"> Wed</label>
-              <label><input type="checkbox" name="day" value="Thu"> Thu</label>
-              <label><input type="checkbox" name="day" value="Fri"> Fri</label>
-            </fieldset>
-
-            <div class="form-row">
-              <label>
-                <input type="checkbox" id="terms" name="terms" required>
-                Accept terms and conditions
-              </label>
-            </div>
-            <div class="form-row">
-              <button id="addRowBtn" type="submit" class="btn">Add row</button>
-              <button id="clearBtn" type="reset" class="btn btn-secondary">Clear</button>
-            </div>
-  
-
+      <section class="controls" aria-label="Lisää Rekisteröinti">
+        <h2 class="controls-title">Information </h2>
+        
+        <form id="regForm" novalidate="">
+          <input id="timestamp" name="timestamp" type="hidden">
+          
+          <div>
+            <label for="fullname">Full Name</label>
+            <input id="fullname" name="fullname" type="text" placeholder="Maria Halla-aho">
+            <span class="error" id="err-fullname" aria-live="polite"></span>
+          </div>
+          
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="make.halla@example.com">
+            <span class="error" id="err-email" aria-live="polite"></span>
+          </div>
+          
+          <div>
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" placeholder="+358 400000415">
+            <small class="hint"></small>
+            <span class="error" id="err-phone" aria-live="polite"></span>
+          </div>
+          
+          <div>
+            <label for="birthdate">Birth Date</label>
+            <input id="birthdate" name="birthdate" type="date">
+            <span class="error" id="err-birthdate" aria-live="polite"></span>
+          </div>
+          
+          <div>
+            <label>
+              <input id="terms" name="terms" type="checkbox">
+              Accepted Terms
+            </label>
+            <span class="error" id="err-terms" aria-live="polite"></span>
+          </div>
+          
+          <div>
+            <button id="submitBtn" type="submit">Add row</button>
+          </div>
         </form>
       </section>
     </div>
-
-    <!-- Table -->
-    <div class="table-wrap">
-      <table class="table" id="timetable">
-        <thead>
+      
+      <div class="table-wrap">
+        <table class="table" id="timetable">
+          <thead>
           <tr>
-            <th>timestamp</th>
-            <th>fullName</th>
-            <th>phone</th>
-            <th>Course</th>
-            <th>Mon</th>
-            <th>Tue</th>
-            <th>Wed</th>
-            <th>Thu</th>
-            <th>Fri</th>
+            <th>Timestamp</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Birth Date</th>
+            <th>Terms</th>
           </tr>
         </thead>
         <tbody>
@@ -107,9 +88,5 @@ Date: 2025-11-07-->
       </table>
     </div>
   </main>
-
-
-
 </body>
-
 </html>
